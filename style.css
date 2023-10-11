@@ -1,0 +1,468 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     }
+    
+    
+body {
+    
+    background-image: url(./img/descarga\ \(10\).jfif);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-repeat:no-repeat ;
+    background-size:cover;
+    
+    }
+    
+    /*.menu{
+    margin-top: 25px;
+    background-color: rgba(5, 3, 3,0.8);
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    /*position: fixed;*//* para que el menu de navegacion se me quede estatico*/
+    /*top: 0;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    
+    }*/
+    
+    
+
+  header{
+
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+padding: 2rem;
+background-color:rgba(31, 30, 30,0.8);
+margin-top: 10px;
+margin: 10px;
+
+  }
+
+.nav-list{
+
+list-style-type: none;
+display: flex;
+gap: 1rem;
+
+}
+
+
+
+
+.abrir-menu, .cerrar-menu{
+
+display: none;
+
+}
+
+
+@media screen and ( max-width:446px) {
+
+.abrir-menu, .cerrar-menu{
+
+display: block;
+
+}
+
+.nav{
+
+display: none;  /* aca se nos oculta el nav cuando pasamos los pixeles*/
+
+}
+
+.nav{
+opacity: 0;
+visibility: hidden;
+
+
+
+display: flex;
+flex-direction: column;
+align-items: end;
+gap: 1rem;
+position: absolute;
+top: 0;/*arranque arriba en la pantalla*/
+right: 0;/* esten a la derecha*/
+background-color: #383d52;
+padding: 2rem;
+box-shadow: 0 0 0 100vmax  rgba(0, 0, 0, 0.5)  ;
+}
+
+.nav.visible{
+
+opacity: 1;
+visibility: visible;
+
+
+}
+
+
+.nav-list{
+
+flex-direction: column;
+align-items: end;
+
+
+}
+    
+.nav-list li a{
+
+color: #fff;
+
+
+
+}
+
+}
+
+
+
+
+
+
+
+
+    
+    a  {
+
+        text-decoration: none;
+        color: #fff;
+        font-family: cursive;
+        
+            } 
+
+    
+    .cuerpo {
+
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 140px;
+    
+    
+    }
+    
+    .container{
+    
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    
+    }
+
+
+
+
+.container .card {
+    position: relative; /* Establece la posición de los elementos card como relativa */
+}
+
+
+
+/* Define un estilo para elementos con la clase "face" dentro de .card */
+.container .card .face {
+    width: 300px; /* Establece el ancho de las caras en 300 píxeles */
+    height: 200px; /* Establece la altura de las caras en 200 píxeles */
+    transition: .4s; /* Agrega una transición de 0.4 segundos a las caras */
+}
+
+
+
+
+
+/* Define un estilo para elementos con la clase "face1" dentro de .face */
+.container .card .face .face1 {
+    position: relative; /* Establece la posición de face1 como relativa */
+    background-color: rgb(201, 150, 150); /* Establece el color de fondo */
+    display: flex; /* Hace que face1 sea un contenedor flexible */
+    justify-content: center; /* Centra horizontalmente los elementos secundarios */
+    align-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra verticalmente los elementos secundarios */
+    z-index: 1; /* Establece el índice z para superponer elementos */
+    transform: translate(100px); /* Aplica una traslación horizontal de 100 píxeles */
+}
+
+
+
+/* Define un estilo para elementos .card cuando se coloca el cursor sobre ellos */
+.container .card:hover .face.face1 {
+    transform: translateY(0); /* Elimina la traslación vertical en el hover */
+    /* Aplica una serie de efectos de sombra y luz en hover */
+    box-shadow: inset 0 0 60px whitesmoke,
+                inset 20px 0 80px rgb(240, 139, 24),
+                inset -20px 0 80px rgb(87, 61, 23),
+                inset 20px 0 300px rgb(240, 139, 24),
+                inset -20px 0 300px rgb(87, 61, 23),
+                0 0 50px #fff,
+                -10px 0 80px rgb(240, 139, 24),
+                10px 0 80px rgb(87, 61, 23);
+}
+
+
+/* Define un estilo para elementos .content dentro de .face1 */
+.container .card .face.face1 .content {
+    opacity: .7; /* Establece la opacidad del contenido en 0.7 */
+    transition: 0.5s; /* Agrega una transición de 0.5 segundos */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* Define un estilo para elementos <i> dentro de .content */
+.container .card .face.face1.content i {
+    font-size: 3em; /* Establece el tamaño de fuente a 3em */
+    color: #fff; /* Establece el color del texto en blanco */
+    display: inline-block; /* Hace que el elemento <i> sea en línea */
+}
+
+
+
+/* Define un estilo para elementos <h3> dentro de .content */
+.container .card .face.face1 .content h3 {
+    font-size: 30px; /* Establece el tamaño de fuente a 30px */
+    color: #000000; /* Establece el color del texto en negro */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+
+
+/* Define un estilo para elementos con la clase "face2" dentro de .card */
+.container .card .face.face2 {
+    position: relative; /* Establece la posición de face2 como relativa */
+    background-color: rgb(100, 62, 4); /* Establece el color de fondo */
+    display: flex; /* Hace que face2 sea un contenedor flexible */
+    align-items: center; /* Centra verticalmente los elementos secundarios */
+    justify-content: center; /* Centra horizontalmente los elementos secundarios */
+    padding: 20px; /* Agrega relleno interior de 20 píxeles */
+    box-sizing: border-box; /* Hace que el modelo de caja incluya el borde y el relleno */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); /* Agrega una sombra */
+    transform: translateY(-100px); /* Aplica una traslación vertical de -100 píxeles */
+}
+
+/* Define un estilo para elementos .card cuando se coloca el cursor sobre ellos */
+.container.card:hover.face.face2 {
+    transform: translateY(0); /* Elimina la traslación vertical en el hover */
+}
+
+/* Define un estilo para elementos de texto y enlaces dentro de .content en face2 */
+.container .card .face.face2 .content p, a {
+    font-size: 15px; /* Establece el tamaño de fuente a 15px */
+    margin: 0; /* Elimina los márgenes del texto */
+    padding: 0; /* Elimina el relleno del texto */
+    color: #eeeeee; /* Establece el color del texto en blanco */
+}
+
+/* Define un estilo para elementos de enlace dentro de .content en face2 */
+
+.container .card .face.face2 .content a {
+    text-decoration: none; /* Elimina la decoración de enlace */
+    color: #111; /* Establece el color del texto del enlace */
+    box-sizing: border-box; /* Hace que el modelo de caja incluya el borde y el relleno */
+    padding: 10px; /* Agrega relleno de 10 píxeles */
+    margin: 15px 0 0; /* Establece los márgenes superior e inferior */
+    display: inline-block; /* Hace que el elemento de enlace sea en línea */
+}
+
+/* Define un estilo para elementos de enlace dentro de .content en face2 cuando se coloca el cursor sobre ellos */
+.container.card .face.face2 .content a:hover {
+    background-color: #333; /* Cambia el color de fondo en hover */
+    color: #fff; /* Cambia el color del texto en hover */
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra en hover */
+}
+
+@media (max-width: 768px) {
+    .container .card {
+        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+    }
+
+    .container .card .face {
+        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+    }
+
+    .container .card .face .face1,
+    .container .card .face .face2 {
+        transform: translateY(0); /* Elimina la traslación en pantallas pequeñas */
+        box-shadow: none; /* Elimina la sombra en pantallas pequeñas */
+    }
+}
+
+
+
+.titulo{   
+display: flex;
+height: 60px;
+padding: 5px;
+margin: 20px;
+}
+
+
+
+
+
+.pie{
+
+display: flex;
+justify-content: space-between;
+padding: 10px;
+
+}
+
+.img{
+height: 250px;
+background-image: url(./img/descarga\ \(11\).jfif);
+background-size: cover;
+background-position: center;
+width: 250px;
+border-radius: 50%;
+}
+
+
+.obra{
+height: 250px;
+background-color: rgba(228, 197, 156,0.5);
+width: 600px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 15px;
+
+
+}
+
+.biografia{
+
+height: 250px;
+background-color: rgba(228, 197, 156,0.5);
+width: 250px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 15px;
+
+}
+
+
+@media (max-width: 768px) {
+    .titulo {
+        margin: 10px;
+    }
+
+    .img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .obra, .biografia {
+        width: 80%;
+        padding: 10px;
+        height: auto;
+    }
+}
+
+
+
+
+h2{
+    color: #000000;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 5px;
+  font-size: 30px;
+    position: relative;
+
+-webkit-text-stroke: 0.3vw #000000;    
+
+  }
+
+  h2::before{
+
+content: attr(data-text);/* este de aqui igual hace que se mueva*/
+position: absolute;
+width: 100%;
+height: 100%;
+color:#000000 ;
+-webkit-text-stroke: 0vw #383d52;
+border-right: 2px solid #000000;
+overflow: hidden;/* hace que la linea se mueva*/
+animation: animate 3s linear infinite;/* estructura cuanto tiempo la linea se va a ir en linea recta*/
+
+  }
+
+
+  @keyframes animate 
+
+  {
+
+    0% , 10% , 100%/* indica de que puntos a que punto tiene que ir moviendose*/
+    {
+
+    width: 0;        
+    }
+
+
+
+        70%, 90%
+        {
+
+            width: 100%;
+
+
+        }
+
+  }
+
+
+
+ol{
+
+ list-style: none;/* le quitas el estilo a lista*/
+ display: grid;
+ grid-template-columns: repeat(7, 1fr); /*el numero de columnas que debe de tener y la fraccicon de espacio que debe de usar*/
+
+}
+.firtsday{
+
+grid-column-start: 5;/* en este caso el lunes empieza en la 5 columna*/
+
+
+}
+
+.day{
+color: #fff;
+font-weight: bold;
+
+
+}
+
+.big{
+text-align: center;
+width: 300px;
+background-color: rgba(228, 197, 156,0.5);
+margin-left: auto;
+margin-right: auto;
+margin-top: 5px;
+
+
+}
+
+.fecha{
+
+color: rgb(221, 10, 10);
+
+
+}

@@ -1,0 +1,222 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+
+
+body{
+background-image: url(./img/descarga\ \(10\).jfif);
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+
+header{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background-color:rgba(31, 30, 30,0.8);
+    margin-top: 10px;
+    margin: 10px;
+    
+      }
+    
+    .nav-list{
+    
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    
+    }
+    
+    
+    
+    
+    .abrir-menu, .cerrar-menu{
+    
+    display: none;
+    
+    }
+    
+    
+    @media screen and ( max-width:446px) {
+    
+    .abrir-menu, .cerrar-menu{
+    
+    display: block;
+    
+    }
+    
+    .nav{
+    
+    display: none;  /* aca se nos oculta el nav cuando pasamos los pixeles*/
+    
+    }
+    
+    .nav{
+    opacity: 0;
+    visibility: hidden;
+    
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;/*arranque arriba en la pantalla*/
+    right: 0;/* esten a la derecha*/
+    background-color: #383d52;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax  rgba(0, 0, 0, 0.5)  ;
+    }
+    
+    .nav.visible{
+    
+    opacity: 1;
+    visibility: visible;
+    
+    
+    }
+    
+    
+    .nav-list{
+    
+    flex-direction: column;
+    align-items: end;
+    
+    
+    }
+        
+    .nav-list li a{
+    
+    color: #fff;
+    
+    
+    
+    }
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+        
+        a  {
+    
+            text-decoration: none;
+            color: #fff;
+            font-family: cursive;
+            
+                } 
+
+
+
+
+
+
+
+
+
+
+    
+
+.form-register{
+height: 400px;
+width: 500px;
+background-color: rgba(12, 10, 6, 0.7);
+display: flex;
+margin-top: 200px;
+flex-direction: column;
+margin-left: auto;
+margin-right: auto;
+border-radius: 10%/50%;
+
+}
+
+
+
+
+
+
+.encabezado{
+
+margin-top: 80px;
+
+}
+
+.botones{  
+border: none;/* le quita el borde a los input*/
+border-radius: 10px;
+height: 12%;
+width: 180px;
+margin: 10px;
+display: flex;
+justify-content: center;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.Regis{
+    cursor: pointer;
+    background-color: rgb(255, 212, 156);
+    border-radius: 20px;
+    border: none;
+    height: 30px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70px;
+    justify-content: center;
+
+}
+.form-register .botones{
+
+background-color: rgba(121, 76, 18, 0.8);
+padding: 5px;
+color: aliceblue;
+
+
+}
+
+.form-register .encabezado:hover  .botones{
+
+ 
+box-shadow:     inset 0 0 60px whitesmoke,
+                inset 20px 0 80px rgb(240, 139, 24),
+                inset -20px 0 80px rgb(87, 61, 23),
+                inset 20px 0 300px rgb(240, 139, 24),
+                inset -20px 0 300px rgb(87, 61, 23),
+                0 0 50px #d6cbcb,
+                -10px 0 80px rgb(240, 139, 24),
+                10px 0 80px rgb(87, 61, 23);
+
+
+}
+
+.form-register{
+
+    box-shadow: inset 0 0 60px rgb(0, 0, 0),
+                inset 20px 0 80px rgb(240, 139, 24),
+                inset -20px 0 80px rgb(87, 61, 23),
+                inset 20px 0 300px rgb(240, 139, 24),
+                inset -20px 0 300px rgb(87, 61, 23),
+                0 0 50px #000000,
+                -10px 0 80px rgb(240, 139, 24),
+                10px 0 80px rgb(87, 61, 23);
+
+
+
+}
+
+

@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     }
+    
+    
+body {
+    
+    background-image: url(./img/descarga\ \(10\).jfif);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-repeat:no-repeat ;
+    background-size:cover;
+    
+    }
+
+
+header{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background-color:rgba(31, 30, 30,0.8);
+    margin-top: 10px;
+    margin: 10px;
+    
+      }
+    
+    .nav-list{
+    
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    
+    }
+    
+    
+    
+    
+    .abrir-menu, .cerrar-menu{
+    
+    display: none;
+    
+    }
+    
+    
+    @media screen and ( max-width:446px) {
+    
+    .abrir-menu, .cerrar-menu{
+    
+    display: block;
+    
+    }
+    
+    .nav{
+    
+    display: none;  /* aca se nos oculta el nav cuando pasamos los pixeles*/
+    
+    }
+    
+    .nav{
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;/*arranque arriba en la pantalla*/
+    right: 0;/* esten a la derecha*/
+    background-color: #383d52;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax  rgba(0, 0, 0, 0.5)  ;
+    }
+    
+    .nav.visible{
+    
+    opacity: 1;
+    visibility: visible;
+    
+    
+    }
+    
+    
+    .nav-list{
+    
+    flex-direction: column;
+    align-items: end;
+    
+    
+    }
+        
+    .nav-list li a{
+    
+    color: #fff;
+    
+    
+    
+    }
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+        
+        a  {
+    
+            text-decoration: none;
+            color: #fff;
+            font-family: cursive;
+            
+                } 
+
+
+
+
+
+
+#todo{
+
+border: 5px solid black;
+height: 900px;
+overflow: hidden;/**/
+
+
+
+
+}
+
+.ItemCarrusel{
+
+height: 200px;
+position: relative;/**/
+height: 100%;
+}
+
+
+.targetaCarrusel{
+
+height: 900px;
+
+}
+
+.flechasCarrusel{
+
+
+height: 100%;
+position:absolute;/**/
+top: 0;
+height: 100%;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px;
+}
+
+#targetaCarrusel1{
+
+background-image: url(./img/man-2442565_1280.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+
+
+
+}
+
+#targetaCarrusel2{
+    background-image: url(./img/portrait-657116_1280.jpg);
+
+    
+    
+    }
+    #targetaCarrusel3{
+   
+       background-image: url(./img/portrait-3180996_1280.jpg);
+        
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .box {
+            flex: 1;
+            margin: 10px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+        }
+        
+        .text {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+        
